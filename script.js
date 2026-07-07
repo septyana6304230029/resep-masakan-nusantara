@@ -56,4 +56,4 @@ function showRecipe(food) {
     }
 
     alert(recipe);
-} 
+}
