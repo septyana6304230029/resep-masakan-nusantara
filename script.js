@@ -147,7 +147,12 @@ function showRecipe(food) {
 }
 
 function closeRecipe() {
-    document.getElementById("recipeModal").style.display = "none";
+    const modal = document.getElementById("recipeModal");
+    modal.style.display = "none";
+
+    if (history.state && history.state.modal) {
+        history.back();
+    }
 }
 
 window.onclick = function (event) {
@@ -165,5 +170,5 @@ document.addEventListener("keydown", function (event) {
 });
 
 window.addEventListener("popstate", function () {
-    closeRecipe();
+    document.getElementById("recipeModal").style.display = "none";
 });
