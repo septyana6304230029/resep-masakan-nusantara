@@ -1,3 +1,4 @@
+console.log("Script terbaru berhasil dimuat");
 function showRecipe(food) {
 
     let recipe = "";
